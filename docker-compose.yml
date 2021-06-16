@@ -1,0 +1,25 @@
+version: '2.4'
+
+services:
+  web-app:
+    container_name: web-app
+    build: .
+    ports:
+      - 9090:9090
+    restart: always
+    depends_on:
+      db:
+        condition: service_started
+    links:
+      - db:database
+
+  db:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - 27017:27017
+    restart: always
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_DATABASE: app_db

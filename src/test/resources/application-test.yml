@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      port: 27017
+      database: kotlin_spring_boot
+      host: localhost
+app:
+  security:
+    jwtSecret: secretKey
+    jwtExpirationMs: 86400000
