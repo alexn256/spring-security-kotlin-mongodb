@@ -3,7 +3,7 @@ spring:
     mongodb:
       port: 27017
       database: kotlin_spring_boot
-      host: localhost
+      host: database
 app:
   security:
     jwtSecret: secretKey

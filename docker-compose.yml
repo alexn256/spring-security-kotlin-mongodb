@@ -22,4 +22,4 @@ services:
     volumes:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     environment:
-      MONGO_INITDB_DATABASE: app_db
+      MONGO_INITDB_DATABASE: kotlin_spring_boot

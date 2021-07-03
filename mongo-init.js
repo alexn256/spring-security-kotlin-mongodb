@@ -13,7 +13,6 @@ db.roles.insertMany([
         _class : "org.alex256.model.Role"
     }
 ]);
-
 db.users.insertMany([
     {
         _id : ObjectId("60d4cee747339d8377e3f2fb"),
@@ -22,8 +21,8 @@ db.users.insertMany([
         email : "email@email.com",
         _class : "org.alex256.application.model.User",
         roles : [
-            DBRef(roles, ObjectId("60cb966e48837e8385f29d76")),
-            DBRef(roles, ObjectId("60cb967f48837e8385f29d77"))
+            DBRef('roles', ObjectId("60cb966e48837e8385f29d76")),
+            DBRef('roles', ObjectId("60cb967f48837e8385f29d77"))
         ]
     },
     {
@@ -37,4 +36,4 @@ db.users.insertMany([
             DBRef("roles", ObjectId("60cb967f48837e8385f29d77"))
         ]
     }
-])
+]);
